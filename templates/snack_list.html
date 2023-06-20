@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section>
+        <div class="container">
+          <h2 class="text-center my-5">IT'S SNACK TIME</h2>
+          {% for snack in snacks %}
+            <p class="text-center my-3">
+              <a href="{% url 'detail_view' snack.pk %}" class="btn btn-secondary">{{ snack.name }}</a>
+            </p>
+          {% endfor %}
+        </div>
+    </section>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container">
+      <a href="{% url 'snack_list' %}" class="btn btn-secondary">Home</a>
+      <section>
+        <h1 class="text-center my-5">Snack name: {{ snacks.name }}</h1>
+        <h2 class="text-center my-3">Snack description: {{ snacks.description }}</h2>
+      </section>
+    </div>
+{% endblock content  %}
