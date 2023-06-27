@@ -28,8 +28,12 @@ class SnackUpdateView (UpdateView):
     fields="__all__"
     success_url=reverse_lazy('snack_list')
 
-class SnackDeleteView(DeleteView):
-    template_name='snack_delete.html'
-    model=Snack
-    success_url=reverse_lazy('snack_list')
+# class SnackDeleteView(DeleteView):
+#     template_name='snack_delete.html'
+#     model=Snack
+#     success_url=reverse_lazy('snack_list')
 
+class SnackDeleteView(DeleteView):
+    template_name = 'snack_delete.html'
+    model = Snack
+    success_url = reverse_lazy('snack_list')
